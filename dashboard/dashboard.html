@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>TaskBit Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../navbar/navbar.css"> </head>
+<body>
+
+<body>
+
+    <div class="app-container">
+        
+        <div id="navbar-placeholder"></div>
+        
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Tasks, Projects...">
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <h1 class="page-title">Dashboard Overview</h1>
+
+                <div class="summary-cards">
+                    <div class="card">
+                        <div class="card-info">
+                            <p class="card-label">Active Task</p>
+                            <h2 class="card-value">24</h2>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <p class="card-label">In Progress</p>
+                            <h2 class="card-value">16</h2>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <p class="card-label">Team Members</p>
+                            <h2 class="card-value">10</h2>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <p class="card-label">Completion Rate</p>
+                            <h2 class="card-value">87%</h2>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <div class="chart-header">
+                        <h3>Weekly Task Overview</h3>
+                        <p>Completed vs Pending tasks this week</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="weeklyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
