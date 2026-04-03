@@ -10,7 +10,7 @@
     --text-muted: #737373;
     --icon-bg: #fcdbdc;
     --icon-color: #4a0a12;
-    --border-color: rgba(255, 255, 255, 0.2);
+    --border-color: #e5e7eb;
 }
 
 * {
@@ -147,4 +147,24 @@ body {
     position: relative;
     height: 350px;
     width: 100%;
+}
+
+/* Styling para sa links sa loob ng nav-menu */
+.nav-menu li a {
+    text-decoration: none; /* Tinatanggal ang underline */
+    color: inherit; /* Ginagaya ang kulay ng parent container */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%; /* Para clickable ang buong row */
+}
+
+/* Kailangan nating tanggalin ang gap at flex sa li dahil inilipat natin ito sa a tag */
+.nav-menu li {
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    /* Tinanggal: display: flex; align-items: center; gap: 12px; */
 }
