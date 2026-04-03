@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Load Checker - TaskBit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="tlc.css">
+    <link rel="stylesheet" href="../navbar/navbar.css"> </head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="navbar-placeholder"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Tasks, Projects...">
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                
+                <div class="page-header-row">
+                    <div class="page-header-text">
+                        <h1 class="page-title">Task Load Checker</h1>
+                        <p class="page-subtitle">Monitor team workload and ensure balanced task distribution</p>
+                    </div>
+                    <button class="btn-add-user">+ Add User</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-title">Average Workload</div>
+                        <div class="stat-value">66%</div>
+                        <div class="stat-subtitle">From last week</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-title">Overloaded Members</div>
+                        <div class="stat-value">1</div>
+                        <div class="stat-subtitle">Require immediate attention</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-title">Total Story Points</div>
+                        <div class="stat-value">119</div>
+                        <div class="stat-subtitle">Across * team members</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">Team Workload Overview</h3>
+                    <p class="chart-subtitle">Current workload distribution across team members</p>
+                    <div class="chart-placeholder"></div>
+                </div>
+
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot color-overloaded"></span> Overloaded
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot color-high"></span> High
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot color-balanced"></span> Balanced
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot color-available"></span> Available
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="tlc.js"></script>
+</body>
+</html>
