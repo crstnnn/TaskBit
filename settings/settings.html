@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings and Profile - TaskBit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="navbar-placeholder"></div>
+
+        <main class="set-main-content">
+            <header class="set-topbar">
+                <div class="set-search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Tasks, Projects...">
+                </div>
+            </header>
+
+            <div class="set-content-wrapper">
+                
+                <div class="set-header-row">
+                    <h1 class="set-page-title">Settings and Profile</h1>
+                    <p class="set-page-subtitle">Manage your account settings and preferences</p>
+                </div>
+
+                <div class="set-tabs-container">
+                    <button class="set-tab active" data-target="tab-profile">
+                        <i class="fa-regular fa-user"></i> Profile
+                    </button>
+                    <button class="set-tab" data-target="tab-notifications">
+                        <i class="fa-regular fa-bell"></i> Notifications
+                    </button>
+                    <button class="set-tab" data-target="tab-security">
+                        <i class="fa-regular fa-shield"></i> Security
+                    </button>
+                </div>
+
+                <div id="tab-profile" class="set-tab-panel active">
+                    
+                    <div class="set-card">
+                        <div class="set-card-body set-profile-info-layout">
+                            <div>
+                                <h3 class="set-section-title">Profile Information</h3>
+                                <p class="set-section-desc">Update your profile photo that appears across TaskBit</p>
+                            </div>
+                            
+                            <div class="set-avatar-upload-area">
+                                <div class="set-avatar-large">JV</div>
+                                <div class="set-upload-actions">
+                                    <div class="set-btn-group">
+                                        <button class="set-btn-primary"><i class="fa-solid fa-camera"></i> Upload Photo</button>
+                                        <button class="set-btn-outline">Remove</button>
+                                    </div>
+                                    <p class="set-upload-hint">Recommended: JPG, PNG or GIF. Square image, max 2MB.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="set-card">
+                        <div class="set-card-body">
+                            <div class="set-card-header-icon">
+                                <i class="fa-regular fa-user"></i>
+                                <div>
+                                    <h3 class="set-section-title">Personal Information</h3>
+                                    <p class="set-section-desc">Update your personal details and contact information</p>
+                                </div>
+                            </div>
+                            
+                            <div class="set-form-grid">
+                                <div class="set-form-group">
+                                    <label>First Name</label>
+                                    <input type="text" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group">
+                                    <label>Role</label>
+                                    <input type="text" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group">
+                                    <label>Middle Name</label>
+                                    <input type="text" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group">
+                                    <label>Phone Number</label>
+                                    <input type="text" class="set-input-gray">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="set-bottom-actions">
+                        <button class="set-btn-outline">Cancel</button>
+                        <button class="set-btn-primary">Save changes</button>
+                    </div>
+
+                </div> <div id="tab-notifications" class="set-tab-panel">
+                    
+                    <div class="set-card">
+                        <div class="set-card-body">
+                            <h3 class="set-section-title">Notification Preferences</h3>
+                            <p class="set-section-desc">Customize how and when you receive notification from TaskBit</p>
+                            
+                            <div class="set-toggle-list">
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <div class="set-toggle-icon-placeholder"></div>
+                                        <div>
+                                            <h4>Email Notification</h4>
+                                            <p>Receive email updates about your task and projects</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        <div>
+                                            <h4>Task Assignment</h4>
+                                            <p>Get notified when tasks are assigned to you</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-solid fa-circle-exclamation" style="color: #6b7280; background: none; -webkit-text-stroke: 1px #fff;"></i>
+                                        <div>
+                                            <h4>Task Updates</h4>
+                                            <p>Received updates when tasks you're involved in change</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-regular fa-user"></i>
+                                        <div>
+                                            <h4>Comments & Mentions</h4>
+                                            <p>Get notified when someone comments or mentions you</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <div>
+                                            <h4>Deadline Reminders</h4>
+                                            <p>Receive reminders about upcoming task deadlines</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <div>
+                                            <h4>Weekly Summary</h4>
+                                            <p>Get a weekly summary of your tasks and activity</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="set-toggle-item">
+                                    <div class="set-toggle-info">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <div>
+                                            <h4>Project Announcement</h4>
+                                            <p>Receive notification about project announcement</p>
+                                        </div>
+                                    </div>
+                                    <label class="set-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="set-slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <div id="tab-security" class="set-tab-panel">
+                    
+                    <div class="set-card">
+                        <div class="set-card-body">
+                            <div class="set-card-header-icon">
+                                <i class="fa-solid fa-lock" style="color: #111;"></i>
+                                <div>
+                                    <h3 class="set-section-title" style="margin-bottom: 2px;">Change Password</h3>
+                                    <p class="set-section-desc">Update your password to keep your account secure</p>
+                                </div>
+                            </div>
+                            
+                            <div class="set-password-form">
+                                <div class="set-form-group">
+                                    <label>Current Password</label>
+                                    <input type="password" class="set-input-gray">
+                                </div>
+                                <div class="set-form-group" style="margin-bottom: 4px;">
+                                    <label>New Password</label>
+                                    <input type="password" class="set-input-gray">
+                                </div>
+                                <p class="set-upload-hint" style="margin-bottom: 24px;">Must be at least 8 characters with numbers and symbols</p>
+                                
+                                <div class="set-form-group">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" class="set-input-gray">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="set-bottom-actions">
+                        <button class="set-btn-outline">Cancel</button>
+                        <button class="set-btn-primary">Save changes</button>
+                    </div>
+
+                </div> </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

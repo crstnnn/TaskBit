@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Points - TaskBit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="sp.css">
+    <link rel="stylesheet" href="../navbar/navbar.css"> </head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="navbar-placeholder"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Tasks, Projects...">
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                
+                <div class="page-header">
+                    <h1 class="page-title">Story Points and Estimation</h1>
+                    <p class="page-subtitle">Track and manage Agile story point estimation and team velocity</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-title">Current Sprint</div>
+                        <div class="stat-value">*</div>
+                        <div class="stat-subtitle">of * Story Points</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-title">Team Velocity</div>
+                        <div class="stat-value">*</div>
+                        <div class="stat-subtitle">Average Completion</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-title">Sprint Progress</div>
+                        <div class="stat-value">*</div>
+                        <div class="stat-subtitle">This week</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-title">Average Task Time</div>
+                        <div class="stat-value">*</div>
+                        <div class="stat-subtitle">Per Story Point</div>
+                    </div>
+                </div>
+
+                <div class="guide-container">
+                    <h3 class="guide-title">Story Point Estimation Guide</h3>
+                    <p class="guide-subtitle">Current workload distribution across team members</p>
+                    
+                    <div class="estimation-cards">
+                        <div class="est-card">
+                            <div class="est-header">
+                                <div class="est-number num-1">1</div>
+                                <div class="est-badge">Simple</div>
+                            </div>
+                            <div class="est-desc">Simple task, &lt;1 hour</div>
+                        </div>
+
+                        <div class="est-card">
+                            <div class="est-header">
+                                <div class="est-number num-2">2</div>
+                                <div class="est-badge">Easy</div>
+                            </div>
+                            <div class="est-desc">Easy task, &lt;2-4 hours</div>
+                        </div>
+
+                        <div class="est-card">
+                            <div class="est-header">
+                                <div class="est-number num-5">5</div>
+                                <div class="est-badge">Moderate</div>
+                            </div>
+                            <div class="est-desc">Moderate task, &lt;4-8 hours</div>
+                        </div>
+
+                        <div class="est-card">
+                            <div class="est-header">
+                                <div class="est-number num-8">8</div>
+                                <div class="est-badge">Hard</div>
+                            </div>
+                            <div class="est-desc">Hard task, &lt;1-2 days</div>
+                        </div>
+
+                        <div class="est-card">
+                            <div class="est-header">
+                                <div class="est-number num-10">10</div>
+                                <div class="est-badge">Very Hard</div>
+                            </div>
+                            <div class="est-desc">Very hard task, &lt;2-3 days</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="sp.js"></script>
+</body>
+</html>

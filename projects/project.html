@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Workspace - TaskBit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="navbar-placeholder"></div>
+
+        <main class="proj-main-content">
+            <header class="proj-topbar">
+                <div class="proj-search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Tasks, Projects...">
+                </div>
+            </header>
+
+            <div class="proj-content-wrapper">
+                
+                <div class="proj-header-row">
+                    <div class="proj-header-text">
+                        <h1 class="proj-page-title">Project Workspace</h1>
+                        <p class="proj-page-subtitle">Manage projects, view announcements, and track team activity</p>
+                    </div>
+                    <button class="proj-btn-create" id="openCreateProjectModal">
+                        <i class="fa-solid fa-plus"></i> Create Projects
+                    </button>
+                </div>
+
+                <div class="proj-stats-grid">
+                    <div class="proj-stat-card">
+                        <div class="proj-stat-title">Total Projects</div>
+                        <div class="proj-stat-value">0</div>
+                    </div>
+                    <div class="proj-stat-card">
+                        <div class="proj-stat-title">In Progress</div>
+                        <div class="proj-stat-value">0</div>
+                    </div>
+                    <div class="proj-stat-card">
+                        <div class="proj-stat-title">At Risk</div>
+                        <div class="proj-stat-value">0</div>
+                    </div>
+                    <div class="proj-stat-card">
+                        <div class="proj-stat-title">Completion</div>
+                        <div class="proj-stat-value">0</div>
+                    </div>
+                </div>
+
+                <div class="proj-grid-2-col">
+                    <div class="proj-card">
+                        <div class="proj-card-header">
+                            <h3>CCIT Night</h3>
+                            <span class="proj-badge proj-status-progress">In Progress</span>
+                        </div>
+                        <div class="proj-progress-info">
+                            <span>Progress</span>
+                            <span class="proj-progress-percent">68%</span>
+                        </div>
+                        <div class="proj-progress-bar-container">
+                            <div class="proj-progress-bar-fill" style="width: 68%;"></div>
+                        </div>
+                        
+                        <div class="proj-card-details">
+                            <div class="proj-detail-item">
+                                <span>Task</span>
+                                <strong>24/35</strong>
+                            </div>
+                            <div class="proj-detail-item">
+                                <span>Due Date</span>
+                                <strong>Apr 25</strong>
+                            </div>
+                            <div class="proj-detail-item">
+                                <span>Team</span>
+                                <div class="proj-avatar-group">
+                                    <div class="proj-avatar-icon"><i class="fa-regular fa-user"></i></div>
+                                    <div class="proj-avatar-icon"><i class="fa-regular fa-user"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="proj-card-footer">
+                            <span class="proj-badge proj-priority-high">High Priority</span>
+                            <a href="#" class="proj-view-details">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div></div>
+                </div>
+
+                <div class="proj-grid-2-col" style="margin-top: 24px;">
+                    
+                    <div class="proj-section-box">
+                        <h3 class="proj-section-title">Announcement</h3>
+                        <p class="proj-section-subtitle">Latest project updates and notices</p>
+                        
+                        <div class="proj-announcement-card">
+                            <div class="proj-announcement-header">
+                                <i class="fa-regular fa-calendar"></i>
+                                <h4>CCIT Night Meeting</h4>
+                            </div>
+                            <p class="proj-announcement-desc">Join us for sprint 6 planning. We'll review backlog and set priorities.</p>
+                            <div class="proj-announcement-footer">
+                                <span>Pres. Trisha</span>
+                                <span>2 Hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="proj-section-box">
+                        <h3 class="proj-section-title">Team Activity</h3>
+                        <p class="proj-section-subtitle">Recent updates from team members</p>
+                        
+                        <div class="proj-activity-list">
+                            <div class="proj-activity-item">
+                                <div class="proj-activity-dot"></div>
+                                <div class="proj-activity-content">
+                                    <div class="proj-activity-text">
+                                        <strong>Cj Santos</strong> Working <strong>CCIT Night</strong>
+                                    </div>
+                                    <div class="proj-activity-meta">
+                                        <span class="proj-badge-outline">Officer</span>
+                                        <span class="proj-activity-time">18 minutes ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="createProjectModal" class="proj-modal-overlay">
+        <div class="proj-modal-content">
+            <button class="proj-modal-close-icon" id="closeIconBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="proj-modal-header">
+                <h2>Create New Project</h2>
+                <p>Set up a new collaborative project for your team.</p>
+            </div>
+            
+            <form id="createProjectForm">
+                <div class="proj-form-group">
+                    <label>Project Name</label>
+                    <input type="text" placeholder="Enter project name" class="proj-modal-input gray-input">
+                </div>
+
+                <div class="proj-form-group">
+                    <label>Description</label>
+                    <textarea rows="3" placeholder="Describe the project goals and scope..." class="proj-modal-input gray-input"></textarea>
+                </div>
+
+                <div class="proj-form-row">
+                    <div class="proj-form-group">
+                        <label>Due Date</label>
+                        <div class="proj-date-input-wrapper">
+                            <input type="date" class="proj-modal-input gray-input proj-date-input" placeholder="mm/dd/yyyy">
+                        </div>
+                    </div>
+                    
+                    <div class="proj-form-group proj-custom-select-container">
+                        <label>Priority</label>
+                        <div class="proj-modal-input gray-input proj-custom-select-header" id="priorityHeader">
+                            <span id="priorityText">Select priority</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="proj-custom-select-list" id="priorityList">
+                            <div class="proj-select-item proj-item-critical" data-value="Critical">Critical</div>
+                            <div class="proj-select-item" data-value="High">High</div>
+                            <div class="proj-select-item" data-value="Medium">Medium</div>
+                            <div class="proj-select-item" data-value="Low">Low</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-modal-actions">
+                    <button type="button" class="proj-btn-cancel" id="closeProjectBtn">Cancel</button>
+                    <button type="submit" class="proj-btn-submit">Create Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
