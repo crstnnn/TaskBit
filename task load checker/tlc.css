@@ -88,21 +88,7 @@ body {
     color: var(--text-muted); 
 }
 
-.btn-add-user {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border: none;
-    padding: 10px 32px;
-    border-radius: 8px; /* Slightly rounded rectangle */
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
 
-.btn-add-user:hover {
-    background-color: #701621;
-}
 
 /* --- Stats Grid --- */
 .stats-grid {
