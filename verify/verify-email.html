@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="../ccit logo/ccit logo.jpg" alt="Logo" class="logo">
+        </div>
+
+        <div class="right-panel">
+            <div class="form-container">
+                <h1>Verify Your Email</h1>
+                <p class="subtitle">Enter the 6-digit code sent to your email.</p>
+
+                <form id="verifyForm">
+                    <input type="email" id="email" class="email-input" placeholder="Email" required />
+                    <input type="text" id="code" class="email-input" placeholder="Verification Code" required />
+                    <button type="submit" class="btn continue-btn" id="verifyBtn">Verify</button>
+                </form>
+
+                <button type="button" class="btn" id="resendBtn" style="margin-top:10px;">Resend Code</button>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="verify-email.js"></script>
+</body>
+</html>
