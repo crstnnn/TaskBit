@@ -18,16 +18,24 @@
     border-bottom: 1px solid var(--border-color);
 }
 
+/* Updated logo-icon to support images */
 .logo-icon {
-    width: 32px;
+    width: 32px; /* Feel free to increase to 40px or 50px if it looks too small */
     height: 32px;
     background-color: #fff;
-    color: var(--sidebar-bg);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    overflow: hidden; /* Ensures the image doesn't spill out of the circle */
+    flex-shrink: 0; /* Prevents the logo container from squishing */
+}
+
+/* New rule specifically for the image inside the logo-icon */
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the logo fills the circle properly */
 }
 
 .brand-text h2 {
@@ -56,11 +64,8 @@
     margin-bottom: 8px;
     border-radius: 6px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
     transition: background 0.2s;
+    /* Tinanggal: display: flex; align-items: center; gap: 12px; */
 }
 
 .nav-menu li:hover {
@@ -117,14 +122,4 @@
     align-items: center;
     gap: 12px;
     width: 100%; /* Para clickable ang buong row */
-}
-
-/* Kailangan nating tanggalin ang gap at flex sa li dahil inilipat natin ito sa a tag */
-.nav-menu li {
-    padding: 14px 16px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-    /* Tinanggal: display: flex; align-items: center; gap: 12px; */
 }

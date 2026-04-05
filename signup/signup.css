@@ -1,0 +1,175 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1; /* Takes up 50% of the screen */
+    background-color: #3e0a0a; /* Dark maroon color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Optional: Adds a subtle dark red glow similar to the image */
+    box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.4); 
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1; /* Takes up 50% of the screen */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    max-width: 420px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #111;
+    margin-bottom: 35px;
+}
+
+/* Buttons and Inputs */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.google-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-btn:hover {
+    background-color: #f8f8f8;
+}
+
+.google-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.email-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: #333;
+}
+
+.email-input:focus {
+    border-color: #3366FF;
+}
+
+.continue-btn {
+    background-color: #3366FF; /* Royal blue */
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.continue-btn:hover {
+    background-color: #254bbf;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+/* Terms and Privacy */
+.terms {
+    font-size: 0.95rem;
+    color: #111;
+    line-height: 1.5;
+}
+
+.terms a {
+    color: #3366FF;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-panel {
+        display: none; /* Hide the logo panel on mobile to focus on login */
+    }
+}
